@@ -74,10 +74,13 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.add),
               label: const Text('Elevated Button Icon'),
             ),
-            FilledButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.add),
-              label: const Text('Filled Button Icon'),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(6),
+              child: FilledButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.add),
+                label: const Text('Filled Button Icon'),
+              ),
             ),
             TextButton.icon(
               onPressed: () {},
@@ -89,7 +92,43 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.add),
               label: const Text('Outlined Button Icon'),
             ),
+            // Boton personalizado
+            const CustomButton(),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
+    // Retornamos un boton con un icono y texto personalizado
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(6),
+      child: Material(
+        color: colors.primary,
+        child: InkWell(
+          onTap: () {},
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.add, color: Colors.white),
+                SizedBox(width: 5),
+                Text(
+                  'Botón personalizado',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
