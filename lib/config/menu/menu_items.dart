@@ -6,7 +6,7 @@ class MenuItems{
   final String title;
   final String subtitle;
   final String url;
-  final Icon icon;
+  final IconData icon;
 
   const MenuItems({
     required this.title,
@@ -17,20 +17,20 @@ class MenuItems{
 
 }
 
-const appMenuItem = <MenuItems> {
+const appMenuItem = <MenuItems>{
 
   MenuItems(
     title: 'Botones',
     subtitle: 'Widgets de Botones',
     url: '/',
-    icon: Icon(Icons.ac_unit)
+    icon: Icons.add_circle_outline_outlined
   ),
 
   MenuItems(
     title: 'Tarjetas',
     subtitle: 'Widgets de Tarjetas',
     url: '/cards',
-    icon: Icon(Icons.access_alarm)
+    icon: Icons.credit_card
   ),
 
 };
