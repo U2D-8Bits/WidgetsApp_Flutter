@@ -22,7 +22,7 @@ const appMenuItem = <MenuItems>{
   MenuItems(
     title: 'Botones',
     subtitle: 'Widgets de Botones',
-    url: '/',
+    url: '/buttons',
     icon: Icons.add_circle_outline_outlined
   ),
 
