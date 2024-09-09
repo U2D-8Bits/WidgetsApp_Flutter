@@ -45,7 +45,7 @@ const appMenuItem = <MenuItems>{
       url: '/progress_indicators',
       icon: Icons.download),
   MenuItems(
-      title: 'SnackBars',
+      title: 'SnackBars y Diálogos',
       subtitle: 'Widgets de SnackBars',
       url: '/snackbars',
       icon: Icons.message),
