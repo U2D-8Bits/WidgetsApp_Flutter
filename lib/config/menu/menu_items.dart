@@ -13,7 +13,7 @@ class MenuItems {
       required this.icon});
 }
 
-const appMenuItem = <MenuItems>{
+const appMenuItem = <MenuItems>[
   MenuItems(
       title: 'Botones',
       subtitle: 'Widgets de Botones',
@@ -54,4 +54,4 @@ const appMenuItem = <MenuItems>{
       subtitle: 'Widgets de App Tutorial',
       url: '/app_tutorial',
       icon: Icons.tour),
-};
+];
