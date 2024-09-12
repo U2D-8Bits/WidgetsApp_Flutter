@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgetapp/presentation/providers/counter_provider.dart';
+import 'package:widgetapp/presentation/providers/theme_provider.dart';
 
 class CounterScreen extends ConsumerWidget {
 
@@ -13,6 +14,7 @@ class CounterScreen extends ConsumerWidget {
 
     final colors = Theme.of(context).colorScheme;
     final int clickCounter = ref.watch(counterProvider);
+    final bool darkMode = ref.watch(isDarkMode);
 
     return Scaffold(
       appBar: AppBar(
@@ -26,13 +28,23 @@ class CounterScreen extends ConsumerWidget {
           ),
         ),
         title: const Text('Riverpod Counter'),
+        actions: [
+          IconButton(
+            icon: Icon( darkMode? Icons.light_mode_outlined : Icons.dark_mode_outlined),
+            onPressed: (){
+              ref.read(isDarkMode.notifier).state = !darkMode;
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Text('valor: $clickCounter', style: Theme.of(context).textTheme.titleLarge ),
       ),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          ref.read(counterProvider.notifier).state++;
+        },
         child: const Icon(Icons.add),  
       ),
 

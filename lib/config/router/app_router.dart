@@ -68,11 +68,18 @@ final GoRouter appRouter = GoRouter(
         return const AppTutorialScreen();
       },
     ),
-        GoRoute(
+    GoRoute(
       name: CounterScreen.name,
       path: '/contador',
-      builder: ( BuildContext context, GoRouterState state) {
+      builder: (BuildContext context, GoRouterState state) {
         return const CounterScreen();
+      },
+    ),
+    GoRoute(
+      name: ThemeChangerScreen.name,
+      path: '/theme_changer',
+      builder: (BuildContext context, GoRouterState state) {
+        return const ThemeChangerScreen();
       },
     ),
   ],

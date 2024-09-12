@@ -59,4 +59,9 @@ const appMenuItem = <MenuItems>[
       subtitle: 'Widgets de App Tutorial',
       url: '/app_tutorial',
       icon: Icons.tour),
+  MenuItems(
+      title: 'Tema',
+      subtitle: 'Widget de cambio de tema',
+      url: '/theme_changer',
+      icon: Icons.tour),
 ];
