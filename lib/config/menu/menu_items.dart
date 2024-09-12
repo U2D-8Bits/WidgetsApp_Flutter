@@ -13,7 +13,7 @@ class MenuItems {
       required this.icon});
 }
 
-const appMenuItem = <MenuItems>{
+const appMenuItem = <MenuItems>[
   MenuItems(
       title: 'Botones',
       subtitle: 'Widgets de Botones',
@@ -24,6 +24,11 @@ const appMenuItem = <MenuItems>{
       subtitle: 'Widgets de Tarjetas',
       url: '/cards',
       icon: Icons.credit_card),
+  MenuItems(
+      title: 'Riverpod Counter',
+      subtitle: 'Widget de contador',
+      url: '/contador',
+      icon: Icons.add),
   MenuItems(
       title: 'Animaciones',
       subtitle: 'Widgets de Animaciones',
@@ -45,7 +50,7 @@ const appMenuItem = <MenuItems>{
       url: '/progress_indicators',
       icon: Icons.download),
   MenuItems(
-      title: 'SnackBars',
+      title: 'SnackBars y Diálogos',
       subtitle: 'Widgets de SnackBars',
       url: '/snackbars',
       icon: Icons.message),
@@ -54,4 +59,9 @@ const appMenuItem = <MenuItems>{
       subtitle: 'Widgets de App Tutorial',
       url: '/app_tutorial',
       icon: Icons.tour),
-};
+  MenuItems(
+      title: 'Tema',
+      subtitle: 'Widget de cambio de tema',
+      url: '/theme_changer',
+      icon: Icons.tour),
+];
