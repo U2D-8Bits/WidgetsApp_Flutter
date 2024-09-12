@@ -25,6 +25,11 @@ const appMenuItem = <MenuItems>[
       url: '/cards',
       icon: Icons.credit_card),
   MenuItems(
+      title: 'Riverpod Counter',
+      subtitle: 'Widget de contador',
+      url: '/contador',
+      icon: Icons.add),
+  MenuItems(
       title: 'Animaciones',
       subtitle: 'Widgets de Animaciones',
       url: '/animated',

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgetapp/config/router/app_router.dart';
 import 'package:widgetapp/config/theme/app_theme.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.black,
-  ));
-
-  runApp(const MainApp());
+  runApp(
+    const ProviderScope(child: MainApp()),
+  );
 }
 
 class MainApp extends StatelessWidget {
